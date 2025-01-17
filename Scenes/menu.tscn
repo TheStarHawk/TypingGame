@@ -1,0 +1,204 @@
+[gd_scene load_steps=2 format=3 uid="uid://6wuw6ckyfd15"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_258o5"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_258o5")
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 158.0
+offset_right = 1440.0
+offset_bottom = 435.0
+theme_override_font_sizes/font_size = 100
+text = "Typing with 
+KidsCo English!"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 500.0
+offset_right = 1110.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Vocab" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 625.0
+offset_right = 1110.0
+offset_bottom = 725.0
+theme_override_font_sizes/font_size = 50
+text = "Vocabulary"
+
+[node name="HighScores" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 750.0
+offset_right = 1110.0
+offset_bottom = 850.0
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "High Scores"
+
+[node name="Options2" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 875.0
+offset_right = 1110.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Options"
+
+[node name="Categories" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Categories"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 100.0
+offset_right = 1216.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 100
+text = "Categories"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Categories"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 299.0
+offset_right = 1440.0
+offset_bottom = 865.0
+
+[node name="VerticalBox" type="VBoxContainer" parent="Categories/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Colors" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Colors"
+
+[node name="Instruments" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Instruments"
+
+[node name="Food" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Food"
+
+[node name="Coming Soon" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon2" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon3" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon4" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon5" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon6" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon7" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon8" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon9" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon10" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon11" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Coming Soon12" type="Button" parent="Categories/ScrollContainer/VerticalBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Coming Soon
+"
+
+[node name="Return" type="Button" parent="Categories"]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 926.0
+offset_right = 1110.0
+offset_bottom = 1026.0
+theme_override_font_sizes/font_size = 50
+text = "Return
+"
+
+[connection signal="pressed" from="Main/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Main/Vocab" to="." method="_on_vocab_pressed"]
+[connection signal="pressed" from="Categories/ScrollContainer/VerticalBox/Colors" to="." method="_on_colors_pressed"]
+[connection signal="pressed" from="Categories/ScrollContainer/VerticalBox/Instruments" to="." method="_on_easter_pressed"]
+[connection signal="pressed" from="Categories/ScrollContainer/VerticalBox/Food" to="." method="_on_food_pressed"]
+[connection signal="pressed" from="Categories/Return" to="." method="_on_return_pressed"]

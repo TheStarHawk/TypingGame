@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://dimggnxrumm6n"]
+
+[ext_resource type="Script" path="res://Scripts/VocabCards.gd" id="1_otnlf"]
+[ext_resource type="Texture2D" uid="uid://dgymvopco1d51" path="res://Sprites/BackGround.png" id="2_fvhok"]
+[ext_resource type="Texture2D" uid="uid://b3g22j1iuqneb" path="res://Sprites/Food/candy.png" id="3_grlyp"]
+
+[node name="VocabCards" type="Node2D"]
+position = Vector2(0, -130)
+script = ExtResource("1_otnlf")
+
+[node name="BackGround" type="Sprite2D" parent="."]
+texture = ExtResource("2_fvhok")
+
+[node name="ColorRect" type="ColorRect" parent="BackGround"]
+show_behind_parent = true
+offset_left = -134.0
+offset_top = -188.0
+offset_right = 136.0
+offset_bottom = 187.0
+color = Color(0.97, 0.97, 0.97, 1)
+
+[node name="Picture" type="Sprite2D" parent="."]
+position = Vector2(0, 32)
+texture = ExtResource("3_grlyp")
+
+[node name="Word" type="Label" parent="."]
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = -115.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "hamburger"
+horizontal_alignment = 1
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
